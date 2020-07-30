@@ -7,8 +7,11 @@ class App extends React.Component {
     super(props);
     this.state = {
       counter: 1,
-      reviews: [],
-      displayed: [{username: 'ikheraj', reviewDate: 'Apr 29, 2020', review: 'loeoic asjfhladkj  adhgasdahbd asdhailfjablfij dfbsdfkdbjffkjbfafad foafhfa afjafkjf'}],
+      reviews: [
+        {username: 'ikheraj', reviewDate: 'Apr 29, 2020', productID: 1, review: 'loeoic asjfhladkj  adhgasdahbd asdhailfjablfij dfbsdfkdbjffkjbfafad foafhfa afjafkjf'},
+        {username: 'ikhe', reviewDate: 'Apr 27, 2020', productID: 2, review: 'loeoic asjfhladkj  adhgasdahbd asdhailfjablfij dfbsdfkdbjffkjbfafad foafhfa afjafkjf'}
+    ],
+      displayed: [],
       sIndex: 0,
       eIndex: 4,
       shopReviews: [],
@@ -33,9 +36,11 @@ class App extends React.Component {
   componentDidMount() {
     const uniqueID = window.location.pathname.substring(1,2);
     this.setState({
-      current: uniqueID
+      current: 1,
+      shopReviews: this.state.reviews,
+      len: this.state.reviews.length,
     }, () => {
-      // this.getReviews();
+      this.filterProductReviews();
     });
 
   }
