@@ -8,8 +8,21 @@ class App extends React.Component {
     this.state = {
       counter: 1,
       reviews: [
-        {username: 'ikheraj', reviewDate: 'Apr 29, 2020', productID: 1, review: 'loeoic asjfhladkj  adhgasdahbd asdhailfjablfij dfbsdfkdbjffkjbfafad foafhfa afjafkjf'},
-        {username: 'ikhe', reviewDate: 'Apr 27, 2020', productID: 2, review: 'loeoic asjfhladkj  adhgasdahbd asdhailfjablfij dfbsdfkdbjffkjbfafad foafhfa afjafkjf'}
+        {username: 'ikheraj', reviewDate: 'Apr 29, 2020', productID: 1, review: 'loeoic asjfhladkj  adhgasdahbd asdhailfjablfij dfbsdfkdbjffkjbfafad foafhfa afjafkjf', rating: 3.6},
+        {username: 'ikhe', reviewDate: 'Apr 27, 2020', productID: 1, review: 'loeoic asjfhladkj  adhgasdahbd asdhailfjablfij dfbsdfkdbjffkjbfafad foafhfa afjafkjf', rating: 4.1},
+        {username: 'ikhe', reviewDate: 'Apr 27, 2020', productID: 1, review: 'loeoic asjfhladkj  adhgasdahbd asdhailfjablfij dfbsdfkdbjffkjbfafad foafhfa afjafkjf', rating: 4.1},
+        {username: 'ikhe', reviewDate: 'Apr 27, 2020', productID: 1, review: 'loeoic asjfhladkj  adhgasdahbd asdhailfjablfij dfbsdfkdbjffkjbfafad foafhfa afjafkjf', rating: 4.1},
+        {username: 'ikhe', reviewDate: 'Apr 27, 2020', productID: 1, review: 'loeoic asjfhladkj  adhgasdahbd asdhailfjablfij dfbsdfkdbjffkjbfafad foafhfa afjafkjf', rating: 4.1},
+        {username: 'ikhe', reviewDate: 'Apr 27, 2020', productID: 1, review: 'loeoic asjfhladkj  adhgasdahbd asdhailfjablfij dfbsdfkdbjffkjbfafad foafhfa afjafkjf', rating: 4.1},
+        {username: 'ikhe', reviewDate: 'Apr 27, 2020', productID: 1, review: 'loeoic asjfhladkj  adhgasdahbd asdhailfjablfij dfbsdfkdbjffkjbfafad foafhfa afjafkjf', rating: 4.1},
+        {username: 'ikhe', reviewDate: 'Apr 27, 2020', productID: 1, review: 'loeoic asjfhladkj  adhgasdahbd asdhailfjablfij dfbsdfkdbjffkjbfafad foafhfa afjafkjf', rating: 4.1},
+        {username: 'ikhe', reviewDate: 'Apr 27, 2020', productID: 1, review: 'loeoic asjfhladkj  adhgasdahbd asdhailfjablfij dfbsdfkdbjffkjbfafad foafhfa afjafkjf', rating: 4.1},
+        {username: 'ikhe', reviewDate: 'Apr 27, 2020', productID: 1, review: 'loeoic asjfhladkj  adhgasdahbd asdhailfjablfij dfbsdfkdbjffkjbfafad foafhfa afjafkjf', rating: 4.1},
+        {username: 'ikhe', reviewDate: 'Apr 27, 2020', productID: 2, review: 'loeoic asjfhladkj  adhgasdahbd asdhailfjablfij dfbsdfkdbjffkjbfafad foafhfa afjafkjf', rating: 4.1},
+        {username: 'ikhe', reviewDate: 'Apr 27, 2020', productID: 2, review: 'loeoic asjfhladkj  adhgasdahbd asdhailfjablfij dfbsdfkdbjffkjbfafad foafhfa afjafkjf', rating: 4.1},
+        {username: 'ikhe', reviewDate: 'Apr 27, 2020', productID: 2, review: 'loeoic asjfhladkj  adhgasdahbd asdhailfjablfij dfbsdfkdbjffkjbfafad foafhfa afjafkjf', rating: 4.1},
+        {username: 'ikhe', reviewDate: 'Apr 27, 2020', productID: 2, review: 'loeoic asjfhladkj  adhgasdahbd asdhailfjablfij dfbsdfkdbjffkjbfafad foafhfa afjafkjf', rating: 4.1},
+        {username: 'ikhe', reviewDate: 'Apr 27, 2020', productID: 2, review: 'loeoic asjfhladkj  adhgasdahbd asdhailfjablfij dfbsdfkdbjffkjbfafad foafhfa afjafkjf', rating: 4.1}
     ],
       displayed: [],
       sIndex: 0,
@@ -41,6 +54,7 @@ class App extends React.Component {
       len: this.state.reviews.length,
     }, () => {
       this.filterProductReviews();
+      this.getAverageShopReview();
     });
 
   }
